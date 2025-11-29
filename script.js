@@ -10,5 +10,11 @@ function randColor() {
 }
 
 bodyColor.addEventListener('keydown', function(){
-	randColor(bodyColor);
+	if(event.key === 'Tab'){
+        event.preventDefault();
+    } else if(event.altKey){
+        event.preventDefault();
+    } else {
+	    randColor(bodyColor);
+    }
 });
